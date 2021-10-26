@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import { PunkAPIProvider } from './ctx/PunkAPIContext';
-import BeerList from './components/BeerList';
-import Favorites from './components/Favorites';
+import BeerList from './components/BeerList/BeerList';
+import Favorites from './components/Favorites/Favorites';
 
 function App() {
   return (

@@ -1,0 +1,22 @@
+.ingredients-header {
+  text-align: left;
+}
+.ingredients-group {
+  display: flex;
+  align-items: center;
+  margin: .3rem 0 .3rem 0;
+}
+.ingredients-icon {
+  height: 50px;
+  margin: 5px;
+}
+.ingredients-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.ingredients-item {
+  margin: 2px 3px 2px 3px;
+  font-weight: 600;
+}

@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useMemo, useState } from "react"
-import { PunkAPIContext } from "../ctx/PunkAPIContext"
-import BeerItem from "./BeerItem"
-import Loader from "./Loader"
+import React, { useContext, useEffect, useState } from "react"
+import { PunkAPIContext } from "../../ctx/PunkAPIContext"
+import BeerItem from "../BeerItem/BeerItem"
+import Loader from "../Loader/Loader"
+
+import './BeerList.css'
 
 const BeerList = () => {
   const {loading, beers, fetchMore, favorites} = useContext(PunkAPIContext)
@@ -24,14 +26,13 @@ const BeerList = () => {
   }, [beers])
 
   return (
-    <div>
-      <ul aria-label='beer-list'>
+    <div className="list-container">
+      <ul className='beer-list' aria-label='beer-list'>
         {beerList}
       </ul>
-      {loading && (<Loader />)}
-      <button onClick={handlePagination}>More Beers!</button>
+      {!loading && (<Loader />)}
+      <button className='list-button_fetch' onClick={handlePagination}>More Beers!</button>
     </div>
-
   )
 }
 

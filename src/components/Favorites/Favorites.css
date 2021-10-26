@@ -1,0 +1,13 @@
+.favorites-container {
+  border: 1px solid var(--highlight);
+
+}
+
+.favorites-header {
+  font-size: 2.2rem;
+}
+
+.favorites-list {
+  padding: 0;
+  list-style: none;
+}

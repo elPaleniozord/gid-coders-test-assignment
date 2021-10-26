@@ -1,5 +1,7 @@
+import './Footer.css'
+
 const Footer = () => (
-  <footer>
+  <footer className='footer'>
     Designed and coded by jWalasik
   </footer>
 )

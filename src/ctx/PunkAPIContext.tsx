@@ -3,7 +3,7 @@ import { ActionType, punkAPIReducer } from "./PunkAPIReducer"
 
 export interface Beer {
   id: number
-  [key: string]: string | number | boolean
+  [key: string]: any
 }
 
 interface APIContext {

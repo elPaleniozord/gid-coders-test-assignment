@@ -1,0 +1,33 @@
+.loader {
+  animation: spin 2s linear infinite;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+.loader-circle {
+  stroke: var(--highlight);
+  stroke-linecap: round;
+  animation: offset 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes offset {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
