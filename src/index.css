@@ -2,6 +2,7 @@
   font-family: "Veneer";
   src: url("./fonts/Veneer.woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 body {

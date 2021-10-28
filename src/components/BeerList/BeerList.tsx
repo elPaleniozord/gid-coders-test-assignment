@@ -1,12 +1,13 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { Suspense, useContext, useEffect, useState } from "react"
 import { PunkAPIContext } from "../../ctx/PunkAPIContext"
-import BeerItem from "../BeerItem/BeerItem"
 import Loader from "../Loader/Loader"
 
 import './BeerList.css'
 
+const BeerItem = React.lazy(() => import('../BeerItem/BeerItem'))
+
 const BeerList = () => {
-  const {loading, beers, fetchMore, favorites} = useContext(PunkAPIContext)
+  const {loading, beers, fetchMore} = useContext(PunkAPIContext)
 
   const [beerList, setBeerList] = useState<(Element | JSX.Element)[]>([])
 
@@ -23,13 +24,17 @@ const BeerList = () => {
     }
 
     setBeerList([...beerList, ...update])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [beers])
 
   return (
     <div className="list-container">
-      <ul className='beer-list' aria-label='beer-list'>
-        {beerList}
-      </ul>
+      <Suspense fallback={<Loader />}>
+        <ul className='beer-list' aria-label='beer-list'>
+          {beerList}
+        </ul>
+      </Suspense>
+
       {loading && (<Loader />)}
       <button className='list-button list-button_fetch' onClick={handlePagination}>More Beers!</button>
     </div>

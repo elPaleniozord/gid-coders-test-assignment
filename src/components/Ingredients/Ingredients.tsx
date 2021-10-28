@@ -4,11 +4,11 @@ interface Ingredient {
   name: string
 }
 
-interface IngredientsProps<T> {
+interface IngredientsProps {
   [key: string]: Ingredient[]
 }
 
-const Ingredients = <T extends unknown>(props: IngredientsProps<T>) => {
+const Ingredients = (props: IngredientsProps) => {
   const processIngredients = (arr: Ingredient[]) => {
     const names = new Set(arr.map(item => item.name))
     let map: (Element | JSX.Element)[] = []

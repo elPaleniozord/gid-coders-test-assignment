@@ -42,6 +42,7 @@ const BeerItem: React.FC<Beer> = (props) => {
       </button>
 
       <div className={`item-details ${expanded ? 'item-details__open': ''}`}>
+      {expanded && (<>
         <div className='details-description'>
           <p>{props.description}</p>
           <img className='item-img' src={props.image_url} alt={`${props.name}`} />
@@ -57,6 +58,7 @@ const BeerItem: React.FC<Beer> = (props) => {
           <h3>Best served with:</h3>
           <ul>{props.food_pairing.map((food: string, i:number) => (<li key={`fp-${i}`}>{food}</li>))}</ul>
         </div>
+        </>)}
       </div>
     </li>
   )
