@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header Component correctly 1`] = `
+<header
+  class="header-container "
+>
+  <h1
+    class="header-caption"
+  >
+    BREWDOG
+  </h1>
+  <img
+    alt="brewdog-logo"
+    class="header-logo"
+    src="/brewdog-logo-small.png"
+  />
+</header>
+`;

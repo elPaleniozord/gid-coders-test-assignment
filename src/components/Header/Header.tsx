@@ -1,6 +1,6 @@
 import './Header.css'
 
-interface PositionProps {
+export interface PositionProps {
   scroll: number
 }
 

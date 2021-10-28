@@ -6,7 +6,7 @@ export interface Beer {
   [key: string]: any
 }
 
-interface APIContext {
+export interface APIContext {
   loading: boolean
   beers: Beer[]
   favorites: number[]

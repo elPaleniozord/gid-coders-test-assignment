@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Favorites Component properly 1`] = `
+<div
+  class="ingredients-container"
+>
+  <h3
+    class="ingredients-header"
+  >
+    Ingredients
+  </h3>
+  <div
+    class="ingredients-group"
+  >
+    <img
+      alt="hops-icon"
+      class="ingredients-icon"
+      src="/hops-icon.png"
+    />
+    <ul
+      class="ingredients-list"
+    >
+      <li
+        class="ingredients-item"
+      >
+        Ahtanum
+      </li>
+      <li
+        class="ingredients-item"
+      >
+        Chinook
+      </li>
+    </ul>
+  </div>
+  <div
+    class="ingredients-group"
+  >
+    <img
+      alt="malt-icon"
+      class="ingredients-icon"
+      src="/malt-icon.png"
+    />
+    <ul
+      class="ingredients-list"
+    >
+      <li
+        class="ingredients-item"
+      >
+        Extra Pale
+      </li>
+    </ul>
+  </div>
+  <div
+    class="ingredients-group"
+  >
+    <img
+      alt="yeast-icon"
+      class="ingredients-icon"
+      src="/yeast-icon.png"
+    />
+    <ul
+      class="ingredients-list"
+    >
+      <li
+        class="ingredients-item"
+      >
+        Wyeast 1056 - American Ale™
+      </li>
+    </ul>
+  </div>
+</div>
+`;

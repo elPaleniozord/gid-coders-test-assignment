@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Favorites Component properly 1`] = `
+<div
+  class="list-container"
+>
+  <ul
+    aria-label="beer-list"
+    class="beer-list"
+  />
+  <button
+    class="list-button list-button_fetch"
+  >
+    More Beers!
+  </button>
+</div>
+`;

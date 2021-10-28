@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header Component correctly 1`] = `
+<footer
+  class="footer"
+>
+  Designed and coded by 
+  <a
+    class="footer-link"
+    href="https://github.com/elPaleniozord"
+  >
+    jWalasik
+  </a>
+</footer>
+`;
