@@ -16,9 +16,9 @@ const Hero: React.FC<PositionProps> = ({scroll}) => {
   return (
     <div className={`hero-container ${scroll !== 0 ? 'hero-container__collapsed' : ''}`}>
       <svg ref={hero} className={`hero-svg`} viewBox='0 0 100 100'>
-        <image className='svg-logo' x='-22' y='10' href={`${process.env.PUBLIC_URL}/brewdog-logo-big.png`} height='25px' />
+        <image className='svg-logo' x='-24' y='10' href={`${process.env.PUBLIC_URL}/brewdog-logo-big.png`} height='25px' />
         <path className={`svg-line svg-line__top`} d='M0 40 L100 40' />
-        <text className='svg-text svg-text__header' x='22%' y='57%' >PUNK API</text>
+        <text className='svg-text svg-text__header' x='25%' y='57%' >PUNK API</text>
         <path className={`svg-line svg-line__bottom`} d='M0 60 L100 60' />
         <text className='svg-text svg-text__sub' x='20%' y='65%' >Explore BREWDOG brewery beer catalogue!</text>
       </svg>

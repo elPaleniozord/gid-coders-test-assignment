@@ -2,8 +2,7 @@
   max-height: 100vh;
   height: 100%;
   background: var(--highlight);
-  transition: all .3s ease-in-out;
-  transition-delay: .4s;
+  transition: all .4s ease-in-out;
 }
 .hero-container__collapsed {
   max-height: 0;
@@ -16,7 +15,8 @@
   pointer-events: none;
 }
 .hero-svg > * {
-  transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
+  transition-delay: 100ms;
 }
 .svg-logo {
   position: absolute;
@@ -45,7 +45,7 @@
 
 .svg-text {
   font-size: 18px;
-  font-family: Veneer;
+  font-family: Bebas Neue;
   fill: transparent;
   stroke: transparent;
 }

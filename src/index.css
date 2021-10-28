@@ -1,9 +1,12 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* brewdog font - unfortunately slows down rendering a lot */
+/* @font-face {
   font-family: "Veneer";
   src: url("./fonts/Veneer.woff2");
   font-weight: normal;
   font-display: swap;
-}
+} */
 
 body {
   margin: 0;
@@ -12,7 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Veneer';
+  font-family: 'Bebas Neue';
   background: rgb(44, 44, 44);
   font-weight: 100;
 }

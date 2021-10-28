@@ -14,7 +14,7 @@
 
 .list-button {
   min-width: calc(320px - .6rem);
-  font-family: Veneer;
+  font-family: Bebas Neue;
   height: 44px;
   background: var(--highlight);
   border: none;
