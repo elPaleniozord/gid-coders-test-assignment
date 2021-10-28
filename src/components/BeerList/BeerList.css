@@ -11,3 +11,20 @@
   list-style: none;
   padding: 0;
 }
+
+.list-button {
+  min-width: calc(320px - .6rem);
+  font-family: Veneer;
+  height: 44px;
+  background: var(--highlight);
+  border: none;
+  border-radius: 5px;
+  color: var(--offblack);
+  font-size: 1.5rem;
+}
+.list-button:hover {
+  box-shadow: inset 0px 0px 10px rgb(0, 102, 131);
+}
+.list-button:active {
+  background: rgb(0, 138, 177);
+}

@@ -22,12 +22,19 @@ const Favorites = () => {
   }
 
   return (
-    <div className="favorites-container" onClick={handleClick}>
-      <h2 className="favorites-header">Favorite Beers </h2>
+    <div className={"favorites-container"} onClick={handleClick}>
+      <h2 className="favorites-header">Favorite Beers</h2>
+      <div className={`favorites-collapsible ${expanded ? 'favorites-collapsible__open' : ''}`}>
+        {beerList.length === 0 ? 
+          <p className="favorites-caption">You don't have any favorites yet</p>
+          :
+          <ul className="favorites-list">{beerList}</ul>
+        } 
+      </div>
 
-      {expanded && (
-        beerList.length === 0 ? (<p className="favorites-caption">You don't have any favorites yet</p>) : <ul className="favorites-list">{beerList}</ul>
-      )}     
+      <svg className={`favorites-icon ${expanded && 'favorites-icon__flipped'}`} viewBox="0 0 20 20">
+        <path d="M19 6.25l-1.5-1.5-7.5 7.5-7.5-7.5L1 6.25l9 9 9-9z"/>
+      </svg>   
     </div>
   )
 }

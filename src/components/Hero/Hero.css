@@ -1,0 +1,77 @@
+.hero-container {
+  max-height: 100vh;
+  height: 100%;
+  background: var(--highlight);
+  transition: all .3s ease-in-out;
+  transition-delay: .4s;
+}
+.hero-container__collapsed {
+  max-height: 0;
+}
+
+.hero-svg {
+  height: 100vh;
+  width: 100%;
+  stroke: black;
+  pointer-events: none;
+}
+.hero-svg > * {
+  transition: all .4s ease-in-out;
+}
+.svg-logo {
+  position: absolute;
+  width: 150px;
+  left: calc(50% - 75px);
+  top: 10%;
+  opacity: 0;
+  transition-delay: 200ms;
+}
+.hero-show > .svg-logo {
+  opacity: 1;
+}
+
+.svg-line {
+  transition: all .2s ease-in-out;
+}
+.svg-line__top {
+  transform: translateX(-200%);
+}
+.svg-line__bottom {
+  transform: translateX(200%);
+}
+.hero-show > .svg-line {
+  transform: translateX(0);
+}
+
+.svg-text {
+  font-size: 18px;
+  font-family: Veneer;
+  fill: transparent;
+  stroke: transparent;
+}
+.hero-show > .svg-text__header{
+  animation: write 1.3s ease-in-out forwards;
+}
+@keyframes write {
+  0% {
+    stroke-width: .1;
+    stroke: var(--offblack);
+    stroke-dasharray: 50% 0;
+    fill: transparent;
+  }
+  50% {
+    stroke: transparent;
+    stroke-dasharray: 0 50%;
+  }
+  100% {
+    fill: var(--offblack);
+  }
+}
+.svg-text__sub {
+  font-size: 4px;
+  opacity: 0;
+}
+.hero-show > .svg-text__sub {
+  opacity: 1;
+  fill: var(--offblack);
+}

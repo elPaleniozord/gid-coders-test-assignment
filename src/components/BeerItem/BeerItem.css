@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-  transition: all 1s ease-in-out;
+  cursor: pointer;
 }
 .item-header {
   color: var(--offblack);
@@ -39,8 +39,15 @@
 }
 
 .item-details {
-  transition: .3s ease;
+  transition: all .4s ease-in-out;
+  max-height: 0;
   height: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+.item-details__open {
+  max-height: 1200px;
+  opacity: 1;
 }
 
 .item-button {
@@ -57,6 +64,10 @@
   height: 44px;
   width: 44px;
   transform: rotate(15deg);
+  cursor: pointer;
+}
+.fav-icon > path {
+  transition: all .3s ease-in-out;
 }
 
 .item-button__expand {

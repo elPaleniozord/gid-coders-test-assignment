@@ -1,22 +1,37 @@
 import { useLayoutEffect, useState } from "react"
 
-const GetScrollPosition = () => {
-  const [visible, setVisible] = useState(true)
+const debounce = (func: any, time: number, immediate:boolean) => {
+  let timeout: any;
+  return function(this: any) {
+    let context = this, 
+        args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, time);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+const useScrollPosition = () => {
+  const [state, setState] = useState(window.pageYOffset || document.documentElement.scrollTop)
 
   const handleScroll = () => {
-    const offset = window.pageYOffset || document.documentElement.scrollTop
-    setVisible(offset !== 0)
+    const offset = window.scrollY || document.documentElement.scrollTop
+    setState(offset)
   }
 
   useLayoutEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
+    window.addEventListener('scroll', debounce(handleScroll, 50, false), true)
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll',debounce(handleScroll, 50, false), true)
     }
   }, [])
 
-  return visible
+  return state
 }
 
-export default GetScrollPosition
+export default useScrollPosition

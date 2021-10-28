@@ -1,13 +1,39 @@
 .favorites-container {
-  border: 1px solid var(--highlight);
-
+  border: 2px solid var(--offwhite);
+  border-radius: 5px;
+  margin: .4rem;
+  margin-top: 180px;
+  color: var(--offwhite);
+  cursor: pointer;
 }
-
 .favorites-header {
+  text-align: center;
   font-size: 2.2rem;
+}
+.favorites-icon {
+  height: 30px;
+  transition: all .4s ease-in-out;
+  fill: var(--highlight);
+}
+.favorites-icon__flipped {
+  transform: scaleY(-1);
+}
+.favorites-collapsible {
+  transition: all .4s ease-in-out;
+  max-height: 0;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+.favorites-collapsible__open {
+  max-height: 1000px;
+  opacity: 1;
 }
 
 .favorites-list {
   padding: 0;
   list-style: none;
+  color: var(--offblack);
+  overflow-y: auto;
+  max-height: 100vh;
 }

@@ -30,8 +30,8 @@ const BeerList = () => {
       <ul className='beer-list' aria-label='beer-list'>
         {beerList}
       </ul>
-      {!loading && (<Loader />)}
-      <button className='list-button_fetch' onClick={handlePagination}>More Beers!</button>
+      {loading && (<Loader />)}
+      <button className='list-button list-button_fetch' onClick={handlePagination}>More Beers!</button>
     </div>
   )
 }

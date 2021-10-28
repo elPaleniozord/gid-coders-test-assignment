@@ -1,14 +1,14 @@
-import useScrollPosition from '../../hooks/useScrollPosition'
 import './Header.css'
 
-const Header = () => {
-  const visible = useScrollPosition()
-  console.log(visible)
+interface PositionProps {
+  scroll: number
+}
+
+const Header: React.FC<PositionProps> = ({scroll}) => {
   return (
-    <header className={`header-container ${visible && 'header-container__big'}`}>
+    <header className={`header-container ${scroll!==0 ? 'show': ''}`}>
       <h1 className="header-caption">BREWDOG</h1>
-      <img className="header-logo" src={`${process.env.PUBLIC_URL}/brewdog-logo.png`} alt="brewdog-logo"></img>
-      <p className="header-description">Explore BREWDOG brewery catalogue!</p>
+      <img className="header-logo" src={`${process.env.PUBLIC_URL}/brewdog-logo-small.png`} alt="brewdog-logo"></img>
     </header>
   )
 }
